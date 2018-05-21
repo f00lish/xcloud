@@ -1,0 +1,51 @@
+server:
+  port: 9311
+
+spring:
+  application:
+    name: xcloud-monitor
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,heapdump,loggers,auditevents,hystrix.stream
+      turbine:
+        location: ${spring.application.name}
+      discovery:
+        converter:
+          management-context-path: /manage
+#  rabbitmq:
+#    host: 10.100.2.30
+#    port: 5672
+#    username: guest
+#    password: guest
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+
+management:
+#  security:
+#    enabled: false
+  context-path: /manage
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+
+turbine:
+  instanceUrlSuffix:
+    default: manage/hystrix.stream
+  cluster-name-expression: new String("default")
+  app-config: xcloud-user,xcloud-auth
+zuul:
+  sensitiveHeaders:
+  routes:
+    turbine:
+      path: /api/turbine/stream/**
+      url: forward:/turbine.stream

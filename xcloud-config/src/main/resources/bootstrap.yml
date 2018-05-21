@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: xcloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/f00lish/xcloud-properties.git
+  rabbitmq:
+    host: 10.100.2.30
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 8550   #服务端口
+
+eureka:
+  instance:
+    health-check-url-path: /health    #健康端点
+    status-page-url-path: /info       #状态端点
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+
+management:
+  security:
+    enabled: false
+  context-path: /manage
+
+
