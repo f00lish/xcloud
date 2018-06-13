@@ -8,15 +8,15 @@
 - 缓存 Redis 3.2以上
 - 消息中间件 RabbitMQ 
 # 应用架构
-- xcloud-eureka 服务注册与发现中心
-- xcloud-config 统一配置中心
-- xcloud-auth 基于Spring OAuth2实现的OAuth2认证服务端，其它服务需要依赖此服务进行认证
-- xcloud-user 用户中心
-- xcloud-basic 基础服务
-- xcloud-gate 基于Spring cloud zuul 实现的api网关 
-- xcloud-upload 文件上传中心。
+- xcloud-eureka SpringCloud服务注册与发现中心
+- xcloud-config SpringCloud统一配置中心
+- xcloud-auth 基于Spring OAuth2实现认证服务端
+- xcloud-user 用户中心服务
+- xcloud-basic 基础服务，提供基础功能
+- xcloud-gate 基于SpringCloud Zuul 实现的网关 
+- xcloud-upload 文件上传中心
 - xcloud-zipkin  数据链路跟踪监控
-- xcloud-monitor 基于 Spring boot admin 实现系统监控
+- xcloud-monitor 基于 SpringBoot Admin 实现系统级监控
 ## 其他模块：
 - xcloud-generate 代码生成器服务
 - xcloud-common 项目通用类
