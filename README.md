@@ -2,7 +2,7 @@
   Xcloud开发平台基于Spring Cloud微服务开发,一个统一授权、认证的后台管理系统，其中包含用户管理、角色权限管理、菜单管理、机构和岗位管理、日志管理等多个模块
 # 环境依赖
 - JDK 1.8 以上
-- IDE 请安装对应IDE的lombok插件
+- IDEA 请安装对应IDE的lombok插件
 - Nginx 
 - 数据库 Mysql 5.1 及以上
 - 缓存 Redis 3.2以上
