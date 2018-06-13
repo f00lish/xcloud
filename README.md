@@ -12,8 +12,8 @@
 - xcloud-config 统一配置中心
 - xcloud-auth 基于Spring OAuth2实现的OAuth2认证服务端，其它服务需要依赖此服务进行认证
 - xcloud-user 用户中心
-- xcloud-basic基础服务
-- xcloud-gate基于Spring cloud zuul 实现的api网关 
+- xcloud-basic 基础服务
+- xcloud-gate 基于Spring cloud zuul 实现的api网关 
 - xcloud-upload 文件上传中心。
 - xcloud-zipkin  数据链路跟踪监控
 - xcloud-monitor 基于 Spring boot admin 实现系统监控
